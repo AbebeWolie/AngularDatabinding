@@ -1,0 +1,43 @@
+<div class="container">
+   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h4>Hello World</h4>
+      <div class="form-group" formGroupName ="user">
+         <label>Name</label>
+         <input type="text" class="form-control" [(ngModel)]="name" formControlName="name">
+         {{form.get('user.name').value}}
+      </div>
+      <div class="form-group" formGroupName="user">
+         <label>Designation</label>
+         <input type="text" class="form-control" [(ngModel)]="designation" formControlName="design">
+      </div>
+   
+      <h4>Employee Address</h4>
+      <div class="form-group" formGroupName="address">
+         <label>Country</label>
+         <input type="text" class="form-control" [(ngModel)]="country" formControlName="country">
+      </div>
+      <div class="form-group" formGroupName="address">
+         <label>City</label>
+         <input type="text" class="form-control"[(ngModel)]="city" formControlName="city">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+   </form>
+
+   <!-- <table class="table border table-striped">
+      <thead>
+         <th>Name</th>
+         <th>Designation</th>
+         <th>Country</th>
+         <th>City</th>
+      </thead>
+      <tbody>
+         <tr *ngFor="let user of userdetail">
+            <td>{{user.name}} </td>
+            <td>{{user.designation}} </td>
+            <td>{{user.country}} </td>
+            <td>{{user.city}} </td>
+         </tr>
+      </tbody>
+   </table> -->
+</div>

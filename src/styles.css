@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.btn{
+    margin: 20px;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgb(255, 255, 255,0.5);
+}
